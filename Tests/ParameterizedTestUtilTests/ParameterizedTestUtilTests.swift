@@ -52,7 +52,7 @@ final class ParameterizedTestUtilTests: XCTestCase {
 
     func testMoreThan() {
         runAll(
-            expect(100, moreThan: 0),
+            expect(1, moreThan: 0),
             expect(Double.pi, moreThan: 3.14),
             expect(Double.infinity, moreThan: 0)
         )
