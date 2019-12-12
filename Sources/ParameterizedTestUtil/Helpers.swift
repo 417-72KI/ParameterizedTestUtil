@@ -33,5 +33,8 @@ public func expect<T: Comparable>(_ expected: T, moreThan actual: T, file: Stati
 
 // MARK: - Run
 public func runAll(_ cases: TestCase...) {
-    cases.forEach { $0.run() }
+    cases.forEach {
+        if ParameterizedTestUtil.needsDump { print($0) }
+        $0.run()
+    }
 }
