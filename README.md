@@ -1,8 +1,11 @@
 # ParameterizedTestUtil
+[![Build Status](https://travis-ci.com/417-72KI/ParameterizedTestUtil.svg?branch=master)](https://travis-ci.com/417-72KI/ParameterizedTestUtil)
+[![GitHub release](https://img.shields.io/github/release/417-72KI/ParameterizedTestUtil/all.svg)](https://github.com/417-72KI/ParameterizedTestUtil/releases)
+[![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/417-72KI/ParameterizedTestUtil/master/LICENSE)
 
 Helps parameterized test in Swift
 
-## Install:
+## Install
 ### Swift Package Manager
 ```swift: Package.swift
 .package(url: "https://github.com/417-72KI/ParameterizedTestUtil.git", .upToNextMajor(from: "1.0.0"))
