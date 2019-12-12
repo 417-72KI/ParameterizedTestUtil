@@ -2,6 +2,11 @@ import XCTest
 import ParameterizedTestUtil
 
 final class ParameterizedTestUtilTests: XCTestCase {
+    override class func setUp() {
+        super.setUp()
+        ParameterizedTestUtil.needsDump = true
+    }
+
     func testEquals() {
         runAll(
             expect(Int("1"), equals: 1),
@@ -26,7 +31,7 @@ final class ParameterizedTestUtilTests: XCTestCase {
     func testNotEqualWithAccuracy() {
         runAll(
             expect(Double("3.1")!, notEqual: 3.14, accuracy: 0.01),
-            expect(Double("3.141592653589793")!, equals: Double.pi, accuracy: 0.000000000000001)
+            expect(Double("3.14159265358979")!, notEqual: Double.pi, accuracy: 0.000000000000001)
         )
     }
 
