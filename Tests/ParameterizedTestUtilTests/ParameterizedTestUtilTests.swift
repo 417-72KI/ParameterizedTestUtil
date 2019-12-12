@@ -57,4 +57,28 @@ final class ParameterizedTestUtilTests: XCTestCase {
             expect(Double.infinity, moreThan: 0)
         )
     }
+
+    func testFunction() {
+        func fibonacci(_ value: UInt) -> Int {
+            switch value {
+            case 0: return 0
+            case 1: return 1
+            default: return fibonacci(value - 1) + fibonacci(value - 2)
+            }
+        }
+
+        test(fibonacci).with(
+            argument(1, shouldOutput: 1),
+            argument(2, shouldOutput: 1),
+            argument(3, shouldOutput: 2),
+            argument(4, shouldOutput: 3),
+            argument(5, shouldOutput: 5),
+            argument(6, shouldOutput: 8),
+            argument(7, shouldOutput: 13),
+            argument(8, shouldOutput: 21),
+            argument(9, shouldOutput: 34),
+            argument(10, shouldOutput: 55),
+            argument(11, shouldOutput: 89)
+        ).runAll()
+    }
 }
