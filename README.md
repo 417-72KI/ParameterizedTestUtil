@@ -18,8 +18,8 @@ TODO: Future support
 ```swift
 runAll(
     expect(Int("1"), equals: 1), // means `XCTAssertEqual(Int("1"), 1)`
-    expect(Double.pi, moreThan: 3.14), means `XCTAssertEqual(Double.pi > 3.14)`
-    expect(Double.pi, lessThan: 3.15), means `XCTAssertTrue(Double.pi < 3.15)`
+    expect(Double.pi, moreThan: 3.14), // means `XCTAssertTrue(Double.pi > 3.14)`
+    expect(Double.pi, lessThan: 3.15), // means `XCTAssertTrue(Double.pi < 3.15)`
     expect(Bool("true")!, is: true) // means `XCTAssertTrue(Bool("true")!)`
 )
 ```
